@@ -11,7 +11,6 @@ public class DecomposeNumber {
 			System.out.println("[GENERATING NUMBER " + index + "] " + index + " [ADDING TO A LIST]");
 			storeNumbers.add(index);
 		}
-//		System.out.println("[LIST SIZE AFTER GENERATE NUMBERS UNTIL REACH MAXDIGITE VARIABLE] - " + storeNumbers.size());
 		List<String> formedNumbers = new ArrayList<String>();
 		
 		for(int index = 0; index <= 9999; index++) {
@@ -24,16 +23,12 @@ public class DecomposeNumber {
 		}
 		
 		for(int index = 0; index <= formedNumbers.size()-1; index++) {
-//			System.out.println("\n[FORMED NUMBERS " + index + "] " +  formedNumbers.get(index));
-//			System.out.println("[INTEGER]: " + formedNumbers.get(index).length());
 			int count = 0;
 			int sum = 0;
 			while(count <= formedNumbers.get(index).length()-1) {
-//				System.out.println("[EACH NUMBER]: " + formedNumbers.get(index).charAt(count));
 				Integer number = Character.getNumericValue(formedNumbers.get(index).charAt(count));
 				sum += number;
 				if(sum == 21) {
-//					System.out.println("[SUM IS " + sum + "]");
 					numbersSumTo21.add(Integer.parseInt(formedNumbers.get(index)));
 				}
 				count++;
